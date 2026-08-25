@@ -3,6 +3,11 @@ from PIL import Image
 import matplotlib.pyplot as plt
 from torch.utils.data import Dataset
 
+def pil_collate_fn(batch):
+        images = [item[0] for item in batch]
+        labels = [item[1] for item in batch]
+        return images, labels
+
 class Dataset(Dataset):
     def __init__(self, patches_path, labels_file, transforms=None):
         self.patches_path = patches_path # root dir of dataset
@@ -26,6 +31,6 @@ class Dataset(Dataset):
         img_path = self.img_paths[idx]
         img = Image.open(img_path)
         label = self.img_labels[idx]
-        img = self.transforms(img)
-
+        if self.transforms is not None:
+            img = self.transforms(img)
         return img, label

@@ -20,7 +20,7 @@ class Dataset(Dataset):
         for line in crude_lines:
             clean_line = line.split()
             self.img_paths.append(os.path.join(self.patches_path, clean_line[0]))
-            self.img_labels.append(clean_line[1])
+            self.img_labels.append(int(clean_line[1]))
         
         self.transforms = transforms
 

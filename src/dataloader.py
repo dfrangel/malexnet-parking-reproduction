@@ -1,12 +1,6 @@
 import os
 from PIL import Image
-import matplotlib.pyplot as plt
 from torch.utils.data import Dataset
-
-def pil_collate_fn(batch):
-        images = [item[0] for item in batch]
-        labels = [item[1] for item in batch]
-        return images, labels
 
 class Dataset(Dataset):
     def __init__(self, patches_path, labels_file, transforms=None):
@@ -29,7 +23,7 @@ class Dataset(Dataset):
 
     def __getitem__(self, idx):
         img_path = self.img_paths[idx]
-        img = Image.open(img_path)
+        img = Image.open(img_path).convert("RGB")
         label = self.img_labels[idx]
         if self.transforms is not None:
             img = self.transforms(img)

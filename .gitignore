@@ -30,7 +30,7 @@ PKLot/
 *.tar.gz
 
 # --- Checkpoints e artefatos de modelo (PyTorch/Caffe) ---
-checkpoints/
+model/
 runs/
 *.pth
 *.pt

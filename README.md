@@ -41,6 +41,25 @@ Para baixar os arquivos originais e ler mais detalhes sobre a criação e metodo
 
 # Decisões
 
+### Arquitetura do Modelo (LRN)
+Foi notada uma divergência entre as fontes de pesquisa para a reprodução dos resultados. Nesse repositório, uso a implementação do mAlexNet original do artigo, com as operações: **Conv → ReLU → LRN → MaxPool**. Porém, no repositório de reprodução citado, não é utilizado o processo LRN (o que gerou resultados ligeiramente diferentes).
+
+Parâmetros exatos da LRN (`size=5`, `alpha=0.0001`, `beta=0.75`, `k=1.0`) foram extraídos da implementação do autor em seu repositório original.
+
+### Hiperparâmetros de Treino
+Seguindo a metodologia do artigo original, usou-se diferentes valores como *learning rate* conforme o treinamento das 18 épocas:
+* **0.01**: entre as épocas 1 e 5
+* **0.005**: entre as épocas 6 e 11
+* **0.0025**: entre as épocas 12 e 18
+
+Usou-se o `weight_decay=0.0005`, que foi um valor encontrado em um artigo mais antigo também de treinamento e que funcionou bem para a reprodução dos resultados. 
+
+Otimizador **SGD** com `momentum=0.9`. Tomou-se a decisão de reaproveitar o mesmo objeto ao longo de todo o treino (ajustando o `lr` manualmente).
+
+### Ambiente e Infraestrutura
+O treino foi todo realizado em uma CPU **Ryzen 7 7735HS**, afinal a minha GPU não suporta CUDA.
+
+O uso de `num_workers=8` foi escolhido por meio de um teste empírico de diferentes valores, pois esse foi o que apresentou o processamento mais veloz.
 # Como usar o código
 
 # Referêcias e Inspirações

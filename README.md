@@ -109,5 +109,8 @@ python src/testing.py
 *   **[Deep Learning for Decentralized Parking Lot Occupancy Detection (2017)](https://scholar.google.com/scholar?q=Deep+Learning+for+Decentralized+Parking+Lot+Occupancy+Detection):** Escrito por Giuseppe Amato, Fabio Carrara, Fabrizio Falchi, Claudio Gennaro, Carlo Meghini e Claudio Vairo.
 
 ### Repositórios
-*   **[Repositório Oficial do Autor (mAlexNet original em Caffe)](https://github.com/fabiocarrara/deep-parking/tree/master)**
-*   **[Repositório Não-Oficial de Reprodução (PyTorch)](https://github.com/wuyenlin/parking_lot_occupancy_detection/tree/master)**
+*   **[Repositório Oficial do Autor (mAlexNet original em Caffe)](https://github.com/fabiocarrara/deep-parking/tree/master):** De um dos criadores do artigo origianl, Fabio Carrara.
+*   **[Repositório Não-Oficial de Reprodução (PyTorch)](https://github.com/wuyenlin/parking_lot_occupancy_detection/tree/master):** Feito por Hao Liu, Sigurd Totland, e Yen-Lin Wu.
+
+### Dataset
+*   **[CNRPark-EXT Dataset](http://cnrpark.it):** Site oficial para download dos dados originais e anotações utilizados neste projeto.

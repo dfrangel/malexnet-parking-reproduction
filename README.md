@@ -3,6 +3,9 @@ Este projeto tem como objetivo principal reproduzir os resultados do artigo cien
 
 A replicação deste experimento estruturado serve como um estudo prático de Visão Computacional focado em um problema do mundo real: classificar de forma robusta se uma vaga de estacionamento está ocupada ou vazia, construindo um modelo generalista que funcione para diferentes localidades.
 
+<img width="1262" height="616" alt="image" src="https://github.com/user-attachments/assets/ed65134c-8e32-4085-88a3-623b6f2220d7" />
+"Exemplo visual do problema e da área monitorada no dataset CNRPark-EXT (Imagem: Amato et al., 2017)."
+
 ## Organização do Repositório
 
 O fluxo de trabalho deste projeto priorizou a experimentação contínua seguida de refatoração, dividindo o código da seguinte maneira:
